@@ -77,14 +77,14 @@
 				E560DECB2B2B71DE0045AE2B /* InteriorRingView.swift */,
 				E560DEC12B2B65660045AE2B /* ExternalRingView.swift */,
 				E560DEC72B2B68970045AE2B /* ColorTheme.swift */,
+				E54CA0772B2AD92D000F2E53 /* MedialSegment.swift */,
 				E560DEC92B2B6FFC0045AE2B /* MedialRingView.swift */,
 				E560DEBF2B2B5F950045AE2B /* InteriorSegment.swift */,
 				E54CA07B2B2B51D2000F2E53 /* CircleSegment.swift */,
+				E57281842B2AC53600C19D8F /* ExteriorSegment.swift */,
 				E54CA0792B2B4E44000F2E53 /* CircleSegmentVIew.swift */,
 				E57281602B2A457900C19D8F /* Assets.xcassets */,
 				E57281622B2A457900C19D8F /* Preview Content */,
-				E57281842B2AC53600C19D8F /* ExteriorSegment.swift */,
-				E54CA0772B2AD92D000F2E53 /* MedialSegment.swift */,
 			);
 			path = ChromaKeys;
 			sourceTree = "<group>";

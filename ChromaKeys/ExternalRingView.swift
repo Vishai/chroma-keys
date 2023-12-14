@@ -5,8 +5,6 @@
 //  Created by Brandon Armstrong on 12/14/23.
 //
 
-// Going to extract the ExteriorRingView from the ContentView and call this in the ContentView.  For now I am going to build out the color theme for the circle, and then complete this [Color]
-
 import SwiftUI
 
 let exteriorSegmentColors: [Color] = [
@@ -24,12 +22,29 @@ let exteriorSegmentColors: [Color] = [
     ColorTheme.cKAutange,
 ]
 
+let exteriorSegmentNotes: [String] = [
+   "A",
+   "E",
+   "B",
+   "Gb F#",
+   "Db",
+   "Ab",
+   "Eb",
+   "Bb",
+   "F",
+   "C",
+   "G",
+   "D"
+]
 struct ExteriorRingView: View {
     let numberOfSegments: Int
     let circleRadius: CGFloat
     let rotationOffset: Double
     let segmentColors: [Color]
     let notes: [String]
+    let fontSize: CGFloat
+    let frameWidth: CGFloat
+    let frameHeight: CGFloat
 
     var body: some View {
         ForEach(0..<numberOfSegments, id: \.self) { i in
@@ -37,7 +52,11 @@ struct ExteriorRingView: View {
                 segment: ExteriorSegment(),
                 color: segmentColors[i % segmentColors.count],
                 note: notes[i % notes.count],
-                rotationDegrees: Double(i) / Double(numberOfSegments) * 180 + rotationOffset
+                rotationDegrees: Double(i) / Double(numberOfSegments) * 180 + rotationOffset,
+                fontSize: fontSize,
+                frameWidth: frameWidth,
+                frameHeight: frameHeight
+                
             )
             .rotationEffect(.degrees(Double(i) / Double(numberOfSegments) * 180))
             .offset(x: circleRadius * cos(CGFloat(i) / CGFloat(numberOfSegments) * 2 * .pi),

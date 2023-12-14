@@ -22,20 +22,41 @@ let interiorSegmentColors: [Color] = [
     ColorTheme.cKBlueGreen,
 ]
 
+let interiorSegmentNotes: [String] = [
+   "G# dim",
+   "D# dim",
+   "A# dim",
+   "E# dim",
+   "C dim",
+   "G dim",
+   "D dim",
+   "A dim",
+   "E dim",
+   "B dim",
+   "F# dim",
+   "C# dim"
+]
+
 struct InteriorRingView: View {
     let numberOfSegments: Int
     let circleRadius: CGFloat
     let rotationOffset: Double
     let segmentColors: [Color]
     let notes: [String]
+    let fontSize: CGFloat
+    let frameWidth: CGFloat
+    let frameHeight: CGFloat
 
     var body: some View {
         ForEach(0..<numberOfSegments, id: \.self) { i in
             CircleSegmentView(
                 segment: InteriorSegment(),
                 color: segmentColors[i % segmentColors.count],
-                note: notes[i % notes.count],
-                rotationDegrees: Double(i) / Double(numberOfSegments) * 180 + rotationOffset
+                note: notes[i % notes.count]                ,
+                rotationDegrees: Double(i) / Double(numberOfSegments) * 180 + rotationOffset,
+                fontSize: fontSize,
+                frameWidth: frameWidth,
+                frameHeight: frameHeight
             )
             .rotationEffect(.degrees(Double(i) / Double(numberOfSegments) * 180))
             .offset(x: circleRadius * cos(CGFloat(i) / CGFloat(numberOfSegments) * 2 * .pi),

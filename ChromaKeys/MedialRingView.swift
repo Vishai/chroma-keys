@@ -23,12 +23,30 @@ let medialSegmentColors: [Color] = [
     ColorTheme.cKTrueBile,
 ]
 
+let medialSegmentNotes: [String] = [
+   "F#m",
+   "C#m",
+   "G#m",
+   "Ebm",
+   "Bbm",
+   "Fm",
+   "Cm",
+   "Gm",
+   "Dm",
+   "Am",
+   "Em",
+   "Bm"
+]
+
 struct MedialRingView: View {
     let numberOfSegments: Int
     let circleRadius: CGFloat
     let rotationOffset: Double
     let segmentColors: [Color]
     let notes: [String]
+    let fontSize: CGFloat
+    let frameWidth: CGFloat
+    let frameHeight: CGFloat
 
     var body: some View {
         ForEach(0..<numberOfSegments, id: \.self) { i in
@@ -36,7 +54,10 @@ struct MedialRingView: View {
                 segment: MedialSegment(),
                 color: segmentColors[i % segmentColors.count],
                 note: notes[i % notes.count],
-                rotationDegrees: Double(i) / Double(numberOfSegments) * 180 + rotationOffset
+                rotationDegrees: Double(i) / Double(numberOfSegments) * 180 + rotationOffset,
+                fontSize: fontSize,
+                frameWidth: frameWidth,
+                frameHeight: frameHeight
             )
             .rotationEffect(.degrees(Double(i) / Double(numberOfSegments) * 180))
             .offset(x: circleRadius * cos(CGFloat(i) / CGFloat(numberOfSegments) * 2 * .pi),
