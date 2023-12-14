@@ -19,40 +19,34 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             ForEach(0..<numberOfSegments, id: \.self) { i in
-                ForEach(0..<numberOfSegments, id: \.self) { i in
-                    CircleSegmentView(
-                        segment: ExteriorSegment(),
-                        color: segmentColors[i % segmentColors.count],
-                        note: notes[i % notes.count],
-                        rotationDegrees: Double(i) / Double(numberOfSegments) * 180 + additionalRotation
-                    )
-                    .rotationEffect(.degrees(Double(i) / Double(numberOfSegments) * 180))
-                    .offset(x: circleRadius * cos(CGFloat(i) / CGFloat(numberOfSegments) * 2 * .pi),
-                            y: circleRadius * sin(CGFloat(i) / CGFloat(numberOfSegments) * 2 * .pi))
-                }
                 
-                ForEach(0..<numberOfSegments, id: \.self) { i in
-                              CircleSegmentView(
-                                  segment: MedialSegment(),
-                                  color: segmentColors[i % segmentColors.count],
-                                  note: notes[i % notes.count],
-                                  rotationDegrees: Double(i) / Double(numberOfSegments) * 180 + additionalRotation
-                              )
-                              .rotationEffect(.degrees(Double(i) / Double(numberOfSegments) * 180))
-                              .offset(x: medialCircleRadius * cos(CGFloat(i) / CGFloat(numberOfSegments) * 2 * .pi),
-                                      y: medialCircleRadius * sin(CGFloat(i) / CGFloat(numberOfSegments) * 2 * .pi))
-                          }
-                ForEach(0..<numberOfSegments, id: \.self) { i in
-                              CircleSegmentView(
-                                  segment: InteriorSegment(),
-                                  color: segmentColors[i % segmentColors.count],
-                                  note: notes[i % notes.count],
-                                  rotationDegrees: Double(i) / Double(numberOfSegments) * 180 + additionalRotation
-                              )
-                              .rotationEffect(.degrees(Double(i) / Double(numberOfSegments) * 180))
-                              .offset(x: interiorCircleRadius * cos(CGFloat(i) / CGFloat(numberOfSegments) * 2 * .pi),
-                                      y: interiorCircleRadius * sin(CGFloat(i) / CGFloat(numberOfSegments) * 2 * .pi))
-                          }
+                // Exterior ring of segments
+                ExteriorRingView(
+                    numberOfSegments: numberOfSegments,
+                    circleRadius: circleRadius,
+                    rotationOffset: additionalRotation,
+                    segmentColors: exteriorSegmentColors,
+                    notes: notes
+                    )
+                
+                // Medial ring of segments
+                MedialRingView(
+                    numberOfSegments: numberOfSegments,
+                    circleRadius: medialCircleRadius,
+                    rotationOffset: additionalRotation,
+                    segmentColors: medialSegmentColors,
+                    notes: notes)
+                
+
+                
+                // Interior ring of segments
+                InteriorRingView(
+                    numberOfSegments: numberOfSegments,
+                    circleRadius: interiorCircleRadius,
+                    rotationOffset: additionalRotation,
+                    segmentColors: interiorSegmentColors,
+                    notes: notes
+                    )
                 
                 Text("Test")
             }
