@@ -10,6 +10,7 @@
 		E54CA0782B2AD92D000F2E53 /* MedialSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54CA0772B2AD92D000F2E53 /* MedialSegment.swift */; };
 		E54CA07A2B2B4E44000F2E53 /* CircleSegmentVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54CA0792B2B4E44000F2E53 /* CircleSegmentVIew.swift */; };
 		E54CA07C2B2B51D2000F2E53 /* CircleSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54CA07B2B2B51D2000F2E53 /* CircleSegment.swift */; };
+		E560DEC02B2B5F950045AE2B /* InteriorSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E560DEBF2B2B5F950045AE2B /* InteriorSegment.swift */; };
 		E572815D2B2A457900C19D8F /* ChromaKeysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E572815C2B2A457900C19D8F /* ChromaKeysApp.swift */; };
 		E572815F2B2A457900C19D8F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E572815E2B2A457900C19D8F /* ContentView.swift */; };
 		E57281612B2A457900C19D8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E57281602B2A457900C19D8F /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		E54CA0772B2AD92D000F2E53 /* MedialSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedialSegment.swift; sourceTree = "<group>"; };
 		E54CA0792B2B4E44000F2E53 /* CircleSegmentVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSegmentVIew.swift; sourceTree = "<group>"; };
 		E54CA07B2B2B51D2000F2E53 /* CircleSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSegment.swift; sourceTree = "<group>"; };
+		E560DEBF2B2B5F950045AE2B /* InteriorSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteriorSegment.swift; sourceTree = "<group>"; };
 		E57281592B2A457900C19D8F /* ChromaKeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChromaKeys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E572815C2B2A457900C19D8F /* ChromaKeysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromaKeysApp.swift; sourceTree = "<group>"; };
 		E572815E2B2A457900C19D8F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			children = (
 				E572815C2B2A457900C19D8F /* ChromaKeysApp.swift */,
 				E572815E2B2A457900C19D8F /* ContentView.swift */,
+				E560DEBF2B2B5F950045AE2B /* InteriorSegment.swift */,
 				E54CA07B2B2B51D2000F2E53 /* CircleSegment.swift */,
 				E54CA0792B2B4E44000F2E53 /* CircleSegmentVIew.swift */,
 				E57281602B2A457900C19D8F /* Assets.xcassets */,
@@ -152,6 +155,7 @@
 				E54CA07A2B2B4E44000F2E53 /* CircleSegmentVIew.swift in Sources */,
 				E572815F2B2A457900C19D8F /* ContentView.swift in Sources */,
 				E54CA0782B2AD92D000F2E53 /* MedialSegment.swift in Sources */,
+				E560DEC02B2B5F950045AE2B /* InteriorSegment.swift in Sources */,
 				E54CA07C2B2B51D2000F2E53 /* CircleSegment.swift in Sources */,
 				E57281852B2AC53600C19D8F /* ExteriorSegment.swift in Sources */,
 				E572815D2B2A457900C19D8F /* ChromaKeysApp.swift in Sources */,
