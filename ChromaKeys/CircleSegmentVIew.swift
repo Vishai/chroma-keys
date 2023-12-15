@@ -28,7 +28,7 @@ struct CircleSegmentView<S: CircleSegment>: View {
             Text(note) // Display the note letter
                 .foregroundColor(.black)
                 .rotationEffect(.degrees(-rotationDegrees + 90)) // Counter-rotate the text to keep it upright
-                .font(.custom("MyriadPro-Regular", size: fontSize))
+                .font(Font.custom("Bach", size: fontSize))
         }
         .onTapGesture {
             print("You hit the \(note) note") // Handle the tap gesture

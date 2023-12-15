@@ -7,34 +7,52 @@
 
 import SwiftUI
 
-let interiorSegmentColors: [Color] = [
-    ColorTheme.cKBluer,
-    ColorTheme.cKViolet,
-    ColorTheme.cKPink,
-    ColorTheme.cKRed,
-    ColorTheme.cKOrange,
-    ColorTheme.cKMarigold,
-    ColorTheme.cKAutange,
-    ColorTheme.cKLemon,
-    ColorTheme.cKTrueBile,
-    ColorTheme.cKLimeGreen,
-    ColorTheme.cKTurqoise,
-    ColorTheme.cKBlueGreen,
-]
+let interiorSegmentColors: [Color] = 
+//[
+//    ColorTheme.cKBluer,
+//    ColorTheme.cKViolet,
+//    ColorTheme.cKPink,
+//    ColorTheme.cKRed,
+//    ColorTheme.cKOrange,
+//    ColorTheme.cKMarigold,
+//    ColorTheme.cKAutange,
+//    ColorTheme.cKLemon,
+//    ColorTheme.cKTrueBile,
+//    ColorTheme.cKLimeGreen,
+//    ColorTheme.cKTurqoise,
+//    ColorTheme.cKBlueGreen,
+//]
+
+
+[
+ ColorTheme.cKBlueGreen,
+ ColorTheme.cKBluer,
+ ColorTheme.cKViolet,
+ ColorTheme.cKPink,
+ ColorTheme.cKRed,
+ ColorTheme.cKOrange,
+ ColorTheme.cKAutange,
+ ColorTheme.cKMarigold,
+ ColorTheme.cKLemon,
+ ColorTheme.cKTrueBile,
+ ColorTheme.cKLimeGreen,
+ ColorTheme.cKTurqoise,
+ ]
+ 
 
 let interiorSegmentNotes: [String] = [
-   "G# dim",
-   "D# dim",
-   "A# dim",
-   "E# dim",
-   "C dim",
-   "G dim",
-   "D dim",
-   "A dim",
-   "E dim",
-   "B dim",
-   "F# dim",
-   "C# dim"
+   "g\u{266F}°",
+   "d\u{266F}°",
+   "a\u{266F}°",
+   "e\u{266F}°",
+   "c°",
+   "g°",
+   "d°",
+   "a°",
+   "e°",
+   "b°",
+   "f\u{266F}°",
+   "c\u{266F}°"
 ]
 
 struct InteriorRingView: View {

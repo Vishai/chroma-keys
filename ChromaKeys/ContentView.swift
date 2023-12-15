@@ -22,7 +22,7 @@ struct ContentView: View {
         horizontalSizeClass == .regular ? 130: 65
     }
     var fontSize: CGFloat {
-        horizontalSizeClass == .regular ? 30 : 20
+        horizontalSizeClass == .regular ? 35 : 20
     }
     
     var frameWidth: CGFloat {

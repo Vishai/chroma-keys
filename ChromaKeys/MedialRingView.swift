@@ -17,25 +17,25 @@ let medialSegmentColors: [Color] = [
     ColorTheme.cKPink,
     ColorTheme.cKRed,
     ColorTheme.cKOrange,
-    ColorTheme.cKMarigold,
     ColorTheme.cKAutange,
+    ColorTheme.cKMarigold,
     ColorTheme.cKLemon,
     ColorTheme.cKTrueBile,
 ]
 
 let medialSegmentNotes: [String] = [
-   "F#m",
-   "C#m",
-   "G#m",
-   "Ebm",
-   "Bbm",
-   "Fm",
-   "Cm",
-   "Gm",
-   "Dm",
-   "Am",
-   "Em",
-   "Bm"
+   "f\u{266F}m",
+   "c\u{266F}m",
+   "g\u{266F}m",
+   "e\u{266D}m",
+   "b\u{266D}m",
+   "fm",
+   "cm",
+   "gm",
+   "dm",
+   "am",
+   "em",
+   "bm"
 ]
 
 struct MedialRingView: View {

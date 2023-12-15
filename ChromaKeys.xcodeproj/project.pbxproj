@@ -16,6 +16,8 @@
 		E560DEC82B2B68970045AE2B /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E560DEC72B2B68970045AE2B /* ColorTheme.swift */; };
 		E560DECA2B2B6FFC0045AE2B /* MedialRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E560DEC92B2B6FFC0045AE2B /* MedialRingView.swift */; };
 		E560DECC2B2B71DE0045AE2B /* InteriorRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E560DECB2B2B71DE0045AE2B /* InteriorRingView.swift */; };
+		E560DED82B2BCBB40045AE2B /* Lassus.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E560DED72B2BCBB40045AE2B /* Lassus.ttf */; };
+		E560DEDA2B2BCCB90045AE2B /* bach.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E560DED92B2BCCB90045AE2B /* bach.ttf */; };
 		E572815D2B2A457900C19D8F /* ChromaKeysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E572815C2B2A457900C19D8F /* ChromaKeysApp.swift */; };
 		E572815F2B2A457900C19D8F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E572815E2B2A457900C19D8F /* ContentView.swift */; };
 		E57281612B2A457900C19D8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E57281602B2A457900C19D8F /* Assets.xcassets */; };
@@ -33,6 +35,9 @@
 		E560DEC72B2B68970045AE2B /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		E560DEC92B2B6FFC0045AE2B /* MedialRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedialRingView.swift; sourceTree = "<group>"; };
 		E560DECB2B2B71DE0045AE2B /* InteriorRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteriorRingView.swift; sourceTree = "<group>"; };
+		E560DED62B2BCA840045AE2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E560DED72B2BCBB40045AE2B /* Lassus.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Lassus.ttf; sourceTree = "<group>"; };
+		E560DED92B2BCCB90045AE2B /* bach.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bach.ttf; sourceTree = "<group>"; };
 		E57281592B2A457900C19D8F /* ChromaKeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChromaKeys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E572815C2B2A457900C19D8F /* ChromaKeysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromaKeysApp.swift; sourceTree = "<group>"; };
 		E572815E2B2A457900C19D8F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E560DECE2B2BC1B50045AE2B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E560DED92B2BCCB90045AE2B /* bach.ttf */,
+				E560DED72B2BCBB40045AE2B /* Lassus.ttf */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		E57281502B2A457900C19D8F = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +85,8 @@
 		E572815B2B2A457900C19D8F /* ChromaKeys */ = {
 			isa = PBXGroup;
 			children = (
+				E560DED62B2BCA840045AE2B /* Info.plist */,
+				E560DECE2B2BC1B50045AE2B /* Supporting Files */,
 				E572815C2B2A457900C19D8F /* ChromaKeysApp.swift */,
 				E560DEC52B2B66F00045AE2B /* ColorExtension.swift */,
 				E572815E2B2A457900C19D8F /* ContentView.swift */,
@@ -156,6 +172,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E57281642B2A457900C19D8F /* Preview Assets.xcassets in Resources */,
+				E560DED82B2BCBB40045AE2B /* Lassus.ttf in Resources */,
+				E560DEDA2B2BCCB90045AE2B /* bach.ttf in Resources */,
 				E57281612B2A457900C19D8F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +332,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ChromaKeys/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChromaKeys/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -342,6 +361,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ChromaKeys/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChromaKeys/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
