@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MedialSegment: Shape {
+struct MedialSegment: CircleSegment {
     func path(in rect: CGRect) -> Path {
         var path = Path()
         let width = rect.size.width
