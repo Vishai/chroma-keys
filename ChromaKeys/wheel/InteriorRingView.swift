@@ -7,24 +7,7 @@
 
 import SwiftUI
 
-let interiorSegmentColors: [Color] = 
-//[
-//    ColorTheme.cKBluer,
-//    ColorTheme.cKViolet,
-//    ColorTheme.cKPink,
-//    ColorTheme.cKRed,
-//    ColorTheme.cKOrange,
-//    ColorTheme.cKMarigold,
-//    ColorTheme.cKAutange,
-//    ColorTheme.cKLemon,
-//    ColorTheme.cKTrueBile,
-//    ColorTheme.cKLimeGreen,
-//    ColorTheme.cKTurqoise,
-//    ColorTheme.cKBlueGreen,
-//]
-
-
-[
+let interiorSegmentColors: [Color] = [
  ColorTheme.cKBlueGreen,
  ColorTheme.cKBluer,
  ColorTheme.cKViolet,
