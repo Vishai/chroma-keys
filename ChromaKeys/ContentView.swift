@@ -12,9 +12,10 @@ struct ContentView: View {
     let additionalRotation: Double = 89
   
   
-  @State private var exteriorRotation: Double = 0
-  @State private var medialRotation: Double = 0
-  @State private var interiorRotation: Double = 0
+//  @State private var exteriorRotation: Double = 0
+//  @State private var medialRotation: Double = 0
+//  @State private var interiorRotation: Double = 0
+  @State private var sharedRotation: Double = 0
   
 
     // Computed properties for dynamic sizing
@@ -44,57 +45,43 @@ struct ContentView: View {
       ExteriorRingView(
         numberOfSegments: numberOfSegments,
         circleRadius: circleRadius,
-        rotationOffset: additionalRotation + exteriorRotation,
+        rotationOffset: additionalRotation,
         segmentColors: exteriorSegmentColors, // Placeholder
         notes: exteriorSegmentNotes, // Placeholder
         fontSize: fontSize,
         frameWidth: frameWidth,
         frameHeight: frameHeight
       )
-      .gesture(
-        RotationGesture()
-          .onChanged { angle in
-            self.exteriorRotation += angle.degrees
-          }
-      )
+      .rotationEffect(Angle(degrees: sharedRotation))
+      
       
       // Medial Ring
       MedialRingView(
         numberOfSegments: numberOfSegments,
         circleRadius: medialCircleRadius,
-        rotationOffset: additionalRotation + medialRotation,
+        rotationOffset: additionalRotation,
         segmentColors: medialSegmentColors, // Placeholder
         notes: medialSegmentNotes, // Placeholder
         fontSize: fontSize - 2,
         frameWidth: frameWidth,
         frameHeight: frameHeight
       )
-      .gesture(
-        RotationGesture()
-          .onChanged { angle in
-            self.medialRotation += angle.degrees
-          }
-      )
-      
+      .rotationEffect(Angle(degrees: sharedRotation))
+    
       // Interior Ring
       InteriorRingView(
         numberOfSegments: numberOfSegments,
         circleRadius: interiorCircleRadius,
-        rotationOffset: additionalRotation + interiorRotation,
+        rotationOffset: additionalRotation,
         segmentColors: interiorSegmentColors, // Placeholder
         notes: interiorSegmentNotes, // Placeholder
         fontSize: fontSize - 11,
         frameWidth: frameWidth,
         frameHeight: frameHeight
       )
-      .gesture(
-        RotationGesture()
-          .onChanged { angle in
-            self.interiorRotation += angle.degrees
-          }
-      )
+      .rotationEffect(Angle(degrees: sharedRotation))
       
-      // Translucent Overlay (remains stationary)
+//       Translucent Overlay (remains stationary)
       translucentOverlay() // Placeholder
         .fill(Color.gray.opacity(0.59))
         .frame(width: frameWidth, height: frameHeight)
@@ -102,6 +89,12 @@ struct ContentView: View {
         .rotationEffect(Angle(degrees: -1))
         .offset(y: 50)
     }
+    .gesture(
+      RotationGesture()
+        .onChanged { angle in
+          self.sharedRotation += angle.degrees
+        }
+    )
   }
 }
 
